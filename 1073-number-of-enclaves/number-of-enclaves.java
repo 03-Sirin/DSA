@@ -12,7 +12,6 @@ class Solution {
     public int numEnclaves(int[][] grid) {
         int row=grid.length;
         int col=grid[0].length;
-        boolean[][] visited=new boolean[row][col];
         for(int i=0;i<row;i++){
             if(grid[i][0] == 1) dfs(grid,i,0);
             if(grid[i][col-1] == 1) dfs(grid,i,col-1);
