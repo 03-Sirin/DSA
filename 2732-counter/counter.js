@@ -3,15 +3,9 @@
  * @return {Function} counter
  */
 var createCounter = function(n) {
-
-    const gen=(function*(n){
-        while(true){
-            yield n++;
-        };
-    })(n);
     
     return function() {
-        return gen.next().value;
+        return n++;
     };
 };
 
